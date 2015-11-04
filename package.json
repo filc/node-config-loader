@@ -1,0 +1,25 @@
+{
+  "name": "app-config-loader",
+  "version": "0.1.0",
+  "description": "Configuration loader",
+  "main": "config-loader.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filc/node-config-loader.git"
+  },
+  "author": "Peter Ujvari <peter.ujvari.3@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/filc/node-config-loader/issues"
+  },
+  "homepage": "https://github.com/filc/node-config-loader#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^2.3.3",
+    "underscore": "^1.8.3",
+    "underscore.nested": "0.1.0"
+  }
+}
