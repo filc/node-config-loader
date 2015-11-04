@@ -1,4 +1,4 @@
-# node-hexconnector
+# node-config-loader
 
 This package is used for loading configs for applications. It handles multiple environments as well.
 
