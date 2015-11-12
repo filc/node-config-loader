@@ -15,7 +15,11 @@ describe('Config loader', function() {
 
             assert.deepEqual(config, {
                 globalVar: 'common',
-                globalCommonToOverwrite: 'common'
+                globalCommonToOverwrite: 'common',
+                objectsToExtend: {
+                    overwrite: 'common',
+                    commonCommon: true
+                }
             });
         });
 
@@ -26,7 +30,12 @@ describe('Config loader', function() {
                 globalVar: 'common',
                 globalVarStaging: 'common-staging',
                 globalStagingToOverwrite: 'common-staging',
-                globalCommonToOverwrite: 'common-staging'
+                globalCommonToOverwrite: 'common-staging',
+                objectsToExtend: {
+                    overwrite: 'commonStaging',
+                    commonCommon: true,
+                    commonStaging: true
+                }
             });
         });
 
@@ -36,7 +45,13 @@ describe('Config loader', function() {
             assert.deepEqual(config, {
                 globalVar: 'common',
                 appVar: 'app',
-                globalCommonToOverwrite: 'app'
+                globalCommonToOverwrite: 'app',
+                objectsToExtend: {
+                    overwrite: 'appCommon',
+                    commonCommon: true,
+                    commonStaging: true,
+                    appCommon: true
+                }
             });
         });
 
@@ -49,7 +64,14 @@ describe('Config loader', function() {
                 globalCommonToOverwrite: 'app',
                 globalVarStaging: 'common-staging',
                 globalStagingToOverwrite: 'app-staging',
-                stagingVar: 'app-staging'
+                stagingVar: 'app-staging',
+                objectsToExtend: {
+                    overwrite: 'appStaging',
+                    commonCommon: true,
+                    commonStaging: true,
+                    appCommon: true,
+                    appStaging: true
+                }
             });
         });
 
