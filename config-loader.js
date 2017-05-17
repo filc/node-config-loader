@@ -1,16 +1,13 @@
-var deepExtend = require('deep-extend');
-
-var _ = require('underscore');
-_.mixin(require('underscore.nested'));
+var _ = require('lodash');
 
 function loadConfig(configFile, app, env) {
     var config = require(configFile);
 
-    return deepExtend(
-        _.clone(_.getNested(config, 'common.common', {})),
-        _.clone(_.getNested(config, 'common.' + env, {})),
-        _.clone(_.getNested(config, app + '.common', {})),
-        _.clone(_.getNested(config, app + '.' + env, {}))
+    return _.merge({},
+        _.clone(_.get(config, 'common.common', {})),
+        _.clone(_.get(config, 'common.' + env, {})),
+        _.clone(_.get(config, app + '.common', {})),
+        _.clone(_.get(config, app + '.' + env, {}))
     );
 }
 

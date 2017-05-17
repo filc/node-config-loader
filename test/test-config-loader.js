@@ -49,7 +49,6 @@ describe('Config loader', function() {
                 objectsToExtend: {
                     overwrite: 'appCommon',
                     commonCommon: true,
-                    commonStaging: true,
                     appCommon: true
                 }
             });
